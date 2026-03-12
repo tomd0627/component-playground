@@ -2,51 +2,53 @@
 
 A public-facing interactive component library built as a portfolio project. 12 hand-crafted React components — animated, accessible, and production-ready. Every component includes a live preview, copyable source code, and detailed accessibility documentation.
 
-**[Live demo →](https://tomdeluca-component-playground.netlify.app)**
-
 ---
 
 ## Tech stack
 
-| Tool | Purpose |
-|------|---------|
-| [Vite 7](https://vite.dev) + [React 19](https://react.dev) | Build tooling and UI framework |
-| [TypeScript](https://typescriptlang.org) | Type safety throughout |
-| [Tailwind CSS v4](https://tailwindcss.com) | Utility-first styling with CSS-first `@theme` config |
-| [GSAP 3](https://gsap.com) + `@gsap/react` | Animation (height tweens, scroll triggers, timelines) |
-| [React Router v7](https://reactrouter.com) | Client-side routing |
-| [shiki](https://shiki.style) | Syntax-highlighted code blocks |
+| Tool                                                       | Purpose                                               |
+| ---------------------------------------------------------- | ----------------------------------------------------- |
+| [Vite 7](https://vite.dev) + [React 19](https://react.dev) | Build tooling and UI framework                        |
+| [TypeScript](https://typescriptlang.org)                   | Type safety throughout                                |
+| [Tailwind CSS v4](https://tailwindcss.com)                 | Utility-first styling with CSS-first `@theme` config  |
+| [GSAP 3](https://gsap.com) + `@gsap/react`                 | Animation (height tweens, scroll triggers, timelines) |
+| [React Router v7](https://reactrouter.com)                 | Client-side routing                                   |
+| [shiki](https://shiki.style)                               | Syntax-highlighted code blocks                        |
 
 ---
 
 ## Components
 
 ### Primitives
-| Component | Key technique |
-|-----------|--------------|
-| **Button** | 4 variants, loading state, `aria-busy`, accessible disabled |
-| **Badge** | 5 colour variants, removable with labelled dismiss button |
-| **Toggle** | `role="switch"`, `aria-checked`, label + description association |
+
+| Component     | Key technique                                                                    |
+| ------------- | -------------------------------------------------------------------------------- |
+| **Button**    | 4 variants, loading state, `aria-busy`, accessible disabled                      |
+| **Badge**     | 5 colour variants, removable with labelled dismiss button                        |
+| **Toggle**    | `role="switch"`, `aria-checked`, label + description association                 |
 | **Accordion** | GSAP height animation, `aria-expanded`/`aria-controls`, `prefers-reduced-motion` |
-| **Tooltip** | 4 placements, hover + focus trigger, `role="tooltip"`, `aria-describedby` |
+| **Tooltip**   | 4 placements, hover + focus trigger, `role="tooltip"`, `aria-describedby`        |
 
 ### Feedback
-| Component | Key technique |
-|-----------|--------------|
-| **Progress Bar** | GSAP width tween, `role="progressbar"`, `aria-valuenow` |
-| **Modal** | GSAP backdrop + panel timeline, `useFocusTrap`, scroll-lock, `aria-modal` |
-| **Toast** | `ToastProvider` + `useToast` hook, `role="alert"/"status"`, GSAP slide, queue |
+
+| Component        | Key technique                                                                 |
+| ---------------- | ----------------------------------------------------------------------------- |
+| **Progress Bar** | GSAP width tween, `role="progressbar"`, `aria-valuenow`                       |
+| **Modal**        | GSAP backdrop + panel timeline, `useFocusTrap`, scroll-lock, `aria-modal`     |
+| **Toast**        | `ToastProvider` + `useToast` hook, `role="alert"/"status"`, GSAP slide, queue |
 
 ### Navigation
-| Component | Key technique |
-|-----------|--------------|
-| **Tabs** | Roving `tabindex`, arrow-key nav, full ARIA tabs pattern |
-| **Dropdown Menu** | `role="menu"`, `aria-haspopup`, focus-returns-to-trigger |
+
+| Component           | Key technique                                                                 |
+| ------------------- | ----------------------------------------------------------------------------- |
+| **Tabs**            | Roving `tabindex`, arrow-key nav, full ARIA tabs pattern                      |
+| **Dropdown Menu**   | `role="menu"`, `aria-haspopup`, focus-returns-to-trigger                      |
 | **Command Palette** | ARIA combobox, `aria-activedescendant`, fuzzy search with `<mark>` highlights |
 
 ### Animation
-| Component | Key technique |
-|-----------|--------------|
+
+| Component         | Key technique                                                        |
+| ----------------- | -------------------------------------------------------------------- |
 | **Scroll Reveal** | GSAP `ScrollTrigger`, 5 animation variants, `prefers-reduced-motion` |
 
 ---
