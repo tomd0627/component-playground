@@ -2,19 +2,19 @@
 
 @theme {
   /* Color palette — oklch for perceptually uniform contrast */
-  --color-surface: oklch(12% 0 0);
-  --color-surface-raised: oklch(17% 0 0);
-  --color-surface-overlay: oklch(22% 0 0);
-  --color-border: oklch(30% 0 0);
-  --color-border-subtle: oklch(24% 0 0);
+  --color-surface: oklch(12% 0.008 195);
+  --color-surface-raised: oklch(17% 0.008 195);
+  --color-surface-overlay: oklch(22% 0.008 195);
+  --color-border: oklch(30% 0.01 195);
+  --color-border-subtle: oklch(24% 0.01 195);
 
-  --color-text-primary: oklch(95% 0 0);
+  --color-text-primary: oklch(95% 0.004 195);
   --color-text-secondary: oklch(70% 0 0);
   --color-text-muted: oklch(60% 0 0);
 
-  --color-accent: oklch(65% 0.2 260);
-  --color-accent-hover: oklch(70% 0.22 260);
-  --color-accent-subtle: oklch(25% 0.08 260);
+  --color-accent: oklch(65% 0.18 175);
+  --color-accent-hover: oklch(70% 0.20 175);
+  --color-accent-subtle: oklch(22% 0.07 175);
 
   --color-success: oklch(68% 0.18 145);
   --color-warning: oklch(75% 0.18 80);
@@ -26,7 +26,7 @@
   --color-warning-border: oklch(30% 0.1 80);
   --color-danger-subtle: oklch(20% 0.06 25);
   --color-danger-border: oklch(30% 0.1 25);
-  --color-accent-border: oklch(30% 0.1 260);
+  --color-accent-border: oklch(32% 0.09 175);
 
   /* Radii */
   --radius-sm: 0.25rem;
@@ -85,19 +85,19 @@ body {
 
 /* Light theme overrides — applied via html.light class */
 html.light {
-  --color-surface: oklch(98% 0 0);
-  --color-surface-raised: oklch(95% 0 0);
-  --color-surface-overlay: oklch(91% 0 0);
-  --color-border: oklch(84% 0 0);
-  --color-border-subtle: oklch(90% 0 0);
+  --color-surface: oklch(98% 0.004 195);
+  --color-surface-raised: oklch(94% 0.005 195);
+  --color-surface-overlay: oklch(90% 0.005 195);
+  --color-border: oklch(84% 0.005 195);
+  --color-border-subtle: oklch(90% 0.003 195);
 
-  --color-text-primary: oklch(12% 0 0);
+  --color-text-primary: oklch(12% 0.008 195);
   --color-text-secondary: oklch(35% 0 0);
   --color-text-muted: oklch(45% 0 0);
 
-  --color-accent: oklch(55% 0.22 260);
-  --color-accent-hover: oklch(50% 0.24 260);
-  --color-accent-subtle: oklch(93% 0.05 260);
+  --color-accent: oklch(50% 0.20 175);
+  --color-accent-hover: oklch(45% 0.22 175);
+  --color-accent-subtle: oklch(92% 0.05 175);
 
   --color-success-subtle: oklch(93% 0.04 145);
   --color-success-border: oklch(80% 0.1 145);
@@ -105,5 +105,5 @@ html.light {
   --color-warning-border: oklch(80% 0.1 80);
   --color-danger-subtle: oklch(96% 0.03 25);
   --color-danger-border: oklch(80% 0.1 25);
-  --color-accent-border: oklch(75% 0.15 260);
+  --color-accent-border: oklch(78% 0.11 175);
 }
