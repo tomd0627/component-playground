@@ -2,7 +2,7 @@
 
 A public-facing interactive component library built as a portfolio project. 12 hand-crafted React components — animated, accessible, and production-ready. Every component includes a live preview, copyable source code, and detailed accessibility documentation.
 
-**[Live demo →](https://component-playground.vercel.app)**
+**[Live demo →](https://tomdeluca-component-playground.netlify.app)**
 
 ---
 
@@ -67,7 +67,7 @@ Every component targets **WCAG 2.1 AA** compliance:
 ## Running locally
 
 ```bash
-git clone https://github.com/tomdeluca/component-playground
+git clone https://github.com/tomd0627/component-playground
 cd component-playground
 npm install
 npm run dev
