@@ -29,10 +29,11 @@ export function AppShell() {
     setSidebarOpen(false);
   }
 
-  // Move focus to main heading on route change
+  // Move focus to main heading on route change (prevPathname triggers this, but isn't read inside)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     mainRef.current?.querySelector<HTMLElement>('h1')?.focus();
-  }, [location.pathname]);
+  }, [prevPathname]);
 
   // Global Cmd+K / Ctrl+K shortcut
   useEffect(() => {
@@ -56,12 +57,12 @@ export function AppShell() {
   }));
 
   return (
-    <div className="min-h-screen flex flex-col bg-surface">
+    <div className="h-screen flex flex-col bg-surface">
       <a href="#main-content" className="skip-nav">
         Skip to main content
       </a>
 
-      <header className="border-b border-border px-4 md:px-6 h-14 flex items-center justify-between shrink-0 bg-surface">
+      <header className="sticky top-0 z-10 border-b border-border px-4 md:px-6 h-14 flex items-center justify-between shrink-0 bg-surface">
         <div className="flex items-center gap-3">
           {/* Hamburger — mobile only */}
           <button

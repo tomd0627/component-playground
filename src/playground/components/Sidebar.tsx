@@ -27,8 +27,8 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
           'w-56 shrink-0 border-r border-border overflow-y-auto py-6 bg-surface',
           // Mobile: fixed drawer sliding in from left
           'fixed left-0 top-0 h-full z-40 transition-transform duration-300',
-          // Desktop: static sidebar, always visible
-          'md:static md:z-auto md:transition-none md:translate-x-0',
+          // Desktop: sticky sidebar pinned below the h-14 header
+          'md:sticky md:top-14 md:h-[calc(100vh-3.5rem)] md:z-auto md:transition-none md:translate-x-0',
           // Mobile open/closed state
           isOpen ? 'translate-x-0' : '-translate-x-full',
         )}
