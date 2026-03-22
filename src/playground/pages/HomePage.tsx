@@ -1,6 +1,6 @@
+import { useGSAP } from '@gsap/react';
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { useGSAP } from '@gsap/react';
 import { usePrefersReducedMotion } from '../../hooks/usePrefersReducedMotion';
 import { gsap } from '../../lib/gsap';
 import { byCategory, bySlug, CATEGORY_ORDER, registry } from '../registry/registry';
@@ -15,7 +15,7 @@ const STATS = [
 const FEATURED_SLUGS = ['accordion', 'modal', 'command-palette', 'scroll-reveal'];
 
 export function HomePage() {
-  const heroRef = useRef<HTMLDivElement>(null);
+  const pageRef = useRef<HTMLDivElement>(null);
   const prefersReduced = usePrefersReducedMotion();
 
   useGSAP(() => {
@@ -23,23 +23,21 @@ export function HomePage() {
 
     const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
-    // Eyebrow badge
-    tl.from('.hero-badge', { opacity: 0, y: -12, duration: 0.4 });
-
     // Headline — each word staggers in
-    tl.from('.hero-word', { opacity: 0, y: 32, stagger: 0.07, duration: 0.5 }, '-=0.1');
+    tl.from('.hero-word', { opacity: 0, y: 32, stagger: 0.07, duration: 0.5 });
 
     // Subtext + stats + CTAs
     tl.from('.hero-sub', { opacity: 0, y: 16, stagger: 0.08, duration: 0.45 }, '-=0.15');
 
     // Featured cards slide up with stagger
     tl.from('.hero-card', { opacity: 0, y: 24, stagger: 0.06, duration: 0.4 }, '-=0.2');
-  }, { scope: heroRef });
+
+  }, { scope: pageRef });
 
   return (
-    <div className="max-w-3xl mx-auto">
+    <div ref={pageRef} className="max-w-3xl mx-auto">
       {/* ── Hero ─────────────────────────────────────────────────── */}
-      <div ref={heroRef} className="pt-6 pb-16">
+      <div className="pt-6 pb-16">
         <h1 className="text-3xl sm:text-5xl font-bold leading-tight mb-5 tracking-tight" aria-label="Component Playground">
           {'Component Playground'.split(' ').map((word, i) => (
             <span key={i} className="hero-word inline-block mr-[0.3em]">
@@ -71,7 +69,7 @@ export function HomePage() {
 
         {/* Featured components */}
         <div className="mt-12">
-          <p className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-4">
+          <p className="hero-sub text-xs font-semibold uppercase tracking-widest text-text-muted mb-4">
             Featured
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
