@@ -223,6 +223,16 @@ export function CommandPalette({ open, onClose, items, placeholder = 'Search com
           <kbd className="hidden sm:inline-flex items-center px-2 py-0.5 rounded text-xs bg-surface-overlay text-text-muted border border-border">
             esc
           </kbd>
+          <button
+            type="button"
+            onClick={onClose}
+            aria-label="Close command palette"
+            className="sm:hidden p-1.5 rounded-md text-text-muted hover:text-text-primary hover:bg-surface-overlay transition-colors"
+          >
+            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+              <path d="M3 3l10 10M13 3L3 13" />
+            </svg>
+          </button>
         </div>
 
         {/* Results */}
