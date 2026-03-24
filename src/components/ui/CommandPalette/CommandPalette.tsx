@@ -309,9 +309,9 @@ export function CommandPalette({ open, onClose, items, placeholder = 'Search com
 
         {/* Footer */}
         <div className="flex items-center gap-4 px-4 py-2 border-t border-border text-xs text-text-muted">
-          <span><kbd>↑↓</kbd> navigate</span>
-          <span><kbd>↵</kbd> select</span>
-          <span><kbd>esc</kbd> close</span>
+          <span><kbd className="inline-flex items-center px-1.5 py-0.5 rounded bg-surface-overlay border border-border shadow-[0_1px_0_var(--color-border)] font-sans">↑↓</kbd> navigate</span>
+          <span><kbd className="inline-flex items-center px-1.5 py-0.5 rounded bg-surface-overlay border border-border shadow-[0_1px_0_var(--color-border)] font-sans">↵</kbd> select</span>
+          <span><kbd className="inline-flex items-center px-1.5 py-0.5 rounded bg-surface-overlay border border-border shadow-[0_1px_0_var(--color-border)] font-sans">esc</kbd> close</span>
         </div>
       </div>
     </div>,
