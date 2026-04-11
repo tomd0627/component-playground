@@ -6,6 +6,8 @@ import buttonA11y from '../../components/ui/Button/Button.a11y.md?raw';
 import buttonSource from '../../components/ui/Button/Button.tsx?raw';
 import commandPaletteA11y from '../../components/ui/CommandPalette/CommandPalette.a11y.md?raw';
 import commandPaletteSource from '../../components/ui/CommandPalette/CommandPalette.tsx?raw';
+import designTokensA11y from '../../components/ui/DesignTokens/DesignTokens.a11y.md?raw';
+import designTokensSource from '../../components/ui/DesignTokens/DesignTokens.tsx?raw';
 import dropdownA11y from '../../components/ui/DropdownMenu/DropdownMenu.a11y.md?raw';
 import dropdownSource from '../../components/ui/DropdownMenu/DropdownMenu.tsx?raw';
 import modalA11y from '../../components/ui/Modal/Modal.a11y.md?raw';
@@ -26,6 +28,7 @@ import { AccordionDemo } from '../demos/AccordionDemo';
 import { BadgeDemo } from '../demos/BadgeDemo';
 import { ButtonDemo } from '../demos/ButtonDemo';
 import { CommandPaletteDemo } from '../demos/CommandPaletteDemo';
+import { DesignTokensDemo } from '../demos/DesignTokensDemo';
 import { DropdownMenuDemo } from '../demos/DropdownMenuDemo';
 import { ModalDemo } from '../demos/ModalDemo';
 import { ProgressBarDemo } from '../demos/ProgressBarDemo';
@@ -38,6 +41,16 @@ import type { Category, ComponentEntry } from './types';
 
 
 export const registry: ComponentEntry[] = [
+  {
+    slug: 'design-tokens',
+    name: 'Design Tokens',
+    category: 'Design Tokens',
+    description: 'The semantic color, spacing, typography, and easing tokens that power every component in this library.',
+    tags: ['tokens', 'colors', 'typography', 'spacing', 'theming'],
+    component: DesignTokensDemo,
+    code: designTokensSource,
+    a11yNotes: designTokensA11y,
+  },
   {
     slug: 'button',
     name: 'Button',
@@ -172,4 +185,4 @@ export const byCategory: Record<Category, ComponentEntry[]> = registry.reduce(
   {} as Record<Category, ComponentEntry[]>
 );
 
-export const CATEGORY_ORDER: Category[] = ['Primitives', 'Feedback', 'Navigation', 'Animation'];
+export const CATEGORY_ORDER: Category[] = ['Design Tokens', 'Primitives', 'Feedback', 'Navigation', 'Animation'];

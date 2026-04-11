@@ -1,6 +1,6 @@
 import type { ComponentType } from 'react';
 
-export type Category = 'Primitives' | 'Feedback' | 'Navigation' | 'Animation';
+export type Category = 'Design Tokens' | 'Primitives' | 'Feedback' | 'Navigation' | 'Animation';
 
 export interface ComponentEntry {
   slug: string;

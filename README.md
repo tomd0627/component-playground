@@ -1,6 +1,6 @@
 # Component Playground
 
-A public-facing interactive component library built as a portfolio project. 12 hand-crafted React components — animated, accessible, and production-ready. Every component includes a live preview, copyable source code, and detailed accessibility documentation.
+A public-facing interactive component library built as a portfolio project. 12 hand-crafted React components plus a full design token reference — animated, accessible, and production-ready. Every entry includes a live preview, copyable source code, and detailed accessibility documentation.
 
 ---
 
@@ -18,6 +18,12 @@ A public-facing interactive component library built as a portfolio project. 12 h
 ---
 
 ## Components
+
+### Design Tokens
+
+| Entry              | What it shows                                                                                    |
+| ------------------ | ------------------------------------------------------------------------------------------------ |
+| **Design Tokens**  | Live color swatches (all semantic `oklch` tokens), radius scale, typography specimens, easing demo |
 
 ### Primitives
 
@@ -90,6 +96,9 @@ src/
 │   │   ├── Accordion.tsx
 │   │   ├── Accordion.a11y.md   ← accessibility rationale
 │   │   └── index.ts
+│   ├── DesignTokens/
+│   │   ├── DesignTokens.tsx    ← typed token exports for JS/TS consumers
+│   │   └── DesignTokens.a11y.md
 │   └── ...
 ├── playground/
 │   ├── components/     # App shell (AppShell, Sidebar, TabPanel, CodeBlock…)
